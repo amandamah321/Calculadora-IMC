@@ -3,28 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora - IMC</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Calculadora - IMC</title>
+    
 </head>
 <body>
-    <main class="container">
-        <div >
-            <div class="title">
-                <h1>Calculadora - IMC</h1>
+
+    <main id="container">
+
+        <section id="image">
+            <img src="/assets/work_out_pic.svg" alt="ilustraçao de uma pessoa malhando">
+        </section>
+
+        <section id="calculator">
+            <form id="form">
+                <h1 id="title">Calculadora - IMC </h1>
+
+                <div class="input_box">
+                    <label for="weight">Peso (Kg)   </label>
+                    <div class="input_field">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                        <input type="weight" id="weight" required>
+                        <span>
+                            Kg
+                        </span>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <label for="height">Altura (Cm)   </label>
+                    <div class="input_field">
+                        <i class="fa-solid fa-ruler-vertical"></i>
+                        <input type="weight" id="hight" required>
+                        <span>
+                            Cm
+                        </span>
+                    </div>
+                </div>
+
+                <button id="calculate">
+                    Calcular
+                </button>
+
+            </form>
+
+            <div id="info">
+                <div id="result">
+                    <div id="imc">
+                        <span id="value">60</span>
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="description">
+                        <span>60</span>
+                    </div>
+                </div>
+
+                <div id="more_info">
+                    <a href="https://abeso.org.br/obesidade-e-sindrome-metabolica/calculadora-imc/" target="_blank">
+                        Saiba mais
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </a>
+                </div>
             </div>
-            <div class="container_input">
-                <label>Altura (cm):</label>
-                <br>
-                <input type="number" id="altura">
-            </div>
-            <div class="container_input">
-                <label>Peso (kg):</label>
-                <br>
-                <input type="number" id='peso'>
-            </div>
-            <button id='calcular' onclick="calcular">Calcular IMC</button>
-        </div>
+        </section>
+
     </main>
-    <script src="/imc.js"></script>
+
+<script src="/imc.js"></script>
 </body>
 </html>
