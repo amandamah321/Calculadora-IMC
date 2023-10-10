@@ -21,22 +21,22 @@
                 <h1 id="title">Calculadora - IMC </h1>
 
                 <div class="input_box">
-                    <label for="weight">Peso (Kg)   </label>
+                    <label for="weight">Peso (Kg)</label>
                     <div class="input_field">
                         <i class="fa-solid fa-weight-hanging"></i>
-                        <input type="weight" id="weight" required>
+                        <input placeholder="Ex: 57" type="weight" id="weight" required>
                         <span>
                             Kg
                         </span>
                     </div>
                 </div>
                 <div class="input_box">
-                    <label for="height">Altura (Cm)   </label>
+                    <label for="height">Altura (M)</label>
                     <div class="input_field">
                         <i class="fa-solid fa-ruler-vertical"></i>
-                        <input type="weight" id="hight" required>
+                        <input placeholder="Ex: 1.56" type="height" id="height" required>
                         <span>
-                            Cm
+                            M
                         </span>
                     </div>
                 </div>
@@ -47,14 +47,14 @@
 
             </form>
 
-            <div id="info">
+            <div id="info" class="hidden">
                 <div id="result">
                     <div id="imc">
-                        <span id="value">60</span>
+                        <span id="value"></span>
                         <span>Seu IMC</span>
                     </div>
                     <div id="description">
-                        <span>60</span>
+                        <span></span>
                     </div>
                 </div>
 
@@ -69,6 +69,6 @@
 
     </main>
 
-<script src="/imc.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>

@@ -1,34 +1,45 @@
 //CALCULAR IMC
 
-const peso = 108;
-const altura = 1.64;
-const imc = peso / Math.pow(altura,2);
 
-console.log("Seu IMC é " + imc);
+const form = document.getElementById('form');
 
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    const weight = document.getElementById('weight').value;
+    const height = document.getElementById('height').value.replace(',','.');
 
-function calcular() {
+    const imc = (weight / (height * height)).toFixed(2);
+
+    const value = document.getElementById('value');
+    let description = '';
+
+    document.getElementById('info').classList.remove('hidden');
+
     if (imc < 18.5) {
 
-        console.log("Você esta abaixo do peso");
+        description = "Você esta abaixo do peso"
     
     } else if (imc >= 18.51 && imc <= 25) {
         
-        console.log("Você esta com seu peso normal");
+        description = "Você esta com seu peso normal";
         
     } else if (imc >= 25.01 && imc <= 30 ) {
     
-        console.log("Você esta acima do peso");
+        description = "Você esta acima do peso";
         
     } else if (imc >= 30.01 && imc <= 40 ) {
     
-        console.log("Você esta obeso");
+        description = "Você esta obeso";
         
     } else {
-        console.log("Obesidade grave");
+        description = "Obesidade grave";
     };
-}
+
+    value.textContent = imc.replace('.',',');
+    document.getElementById('description').textContent = description;
+});
+
 
 
 

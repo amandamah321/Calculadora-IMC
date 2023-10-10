@@ -32,6 +32,7 @@ body {
     width: 25rem;
     border-radius: 10px;
     align-items: center;
+    height: 100%;
 }
 
 #form {
@@ -80,6 +81,7 @@ body {
     height: 3rem;
     border: none;
     width: 13rem;
+    padding: 0 8px;
 }
 
 #form button {
@@ -137,4 +139,37 @@ body {
 
 #form button:hover {
     border: 2px solid white;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+    #image {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+
+    body {
+        background-color: #f7df1e;
+    }
+
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    #calculator {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
+    
 }
